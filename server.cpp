@@ -70,8 +70,6 @@ void main()
 	{
 		ZeroMemory(buf, sizeof(int));
 
-		int intReceived = 3;
-
 		// Wait for client to send data
 		int bytesReceived = recv(clientSocket, (char*)&buf, sizeof(int), 0);
 		if (bytesReceived == SOCKET_ERROR)
@@ -86,8 +84,7 @@ void main()
 			break;
 		}
 
-		int bufInt = 0;
-		int * bufIntPtr = &bufInt;
+		int * bufIntPtr ;
 		bufIntPtr = (int*)&buf;
 		int intPacket = (int)buf;
 
