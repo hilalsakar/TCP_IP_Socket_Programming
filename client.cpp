@@ -20,8 +20,8 @@ char * client_receive()
 	}
 
 	puts("reply received\n");
-	int  intVar = 0;
-	int * bufintPtr = &intVar;
+	
+	int * bufintPtr ;
 	bufintPtr = (int*)&buffer;
 
 	buffer[receive_size] = '\0';
