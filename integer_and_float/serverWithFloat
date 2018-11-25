@@ -99,22 +99,16 @@ void main()
 			break;
 		}
 
-		int bufInt=0;
-		int * bufIntPtr = &bufInt;
+		int * bufIntPtr ;
 		bufIntPtr = (int*)&buf;
-		//packetSize = recv(networkSocket, messageBuffer, sizeof(int), 0);
 		int intPacket = (int)buf;
 
 		cout <<  *bufIntPtr << endl;
 
-		//cout << "hilalsss :" <<(char*)&buf << endl;
-		// Echo message back to client
-		//send(clientSocket, (char*)&intReceived, sizeof(int), 0);
-
 		send(clientSocket, (char*)&buf ,sizeof(int),0);
 
-		float bufFloat = 0.00;
-		float * bufFloatPtr = &bufFloat;
+		
+		float * bufFloatPtr;
 		bufFloatPtr = (float*)&bufFloatArray;
 
 		cout  << *bufFloatPtr << endl;
