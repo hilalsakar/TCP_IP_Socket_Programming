@@ -7,7 +7,7 @@
 using namespace std;
 string ipAddress = "127.0.0.1";			// IP Address of the server
 int port = 54000;						// Listening port # on the server
-char const *message;
+
 char bufferint[160];
 char bufferfloat[160];
 int receive_size;
@@ -21,8 +21,8 @@ char * client_receive()
 	}
 
 	puts("reply received\n");
-	int  intVar = 0;
-	int * bufintPtr = &intVar;
+	
+	int * bufintPtr ;
 	bufintPtr = (int*)&bufferint;
 
 	bufferint[receive_size] = '\0';
@@ -37,8 +37,7 @@ char * client_receiveFloat()
 		puts("recv failed.");
 	}
 
-	float  floatVar = 0.00;
-	float * bufFloatPtr = &floatVar;
+	float * bufFloatPtr;
 	bufFloatPtr = (float*)&bufferfloat;
 
 	bufferfloat[receive_size] = '\0';
