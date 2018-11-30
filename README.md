@@ -8,5 +8,7 @@ This repo contains many simple examples of TCP/IP programming.
 - Sending a float variable over TCP/IP
 ##### sendIntWithCharArray
 - Sending an integer variable over TCP/IP as chunks: An integer variable(4 byte) is divided into bytes and these bytes are sent.
-##### senStruct
+##### sendStruct
 - Sending a struct member over TCP/IP.
+#### OpenableCloseableSocket
+- To close(0) or open(1) socket with integer values (0 and 1).
