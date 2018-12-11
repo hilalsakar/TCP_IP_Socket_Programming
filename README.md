@@ -12,3 +12,5 @@ This repo contains many simple examples of TCP/IP programming.
 - Sending a struct member over TCP/IP.
 #### OpenableCloseableSocket
 - To close(0) or open(1) socket with integer values (0 and 1).
+#### SendDoubleNumbersFromFile
+- To sending double numbers from file, Each line was read without ',' as split.
